@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача js № 6 (склонение по падежам суммы взноса)</title>
+</head>
+<body>
+
+    <script>  'use strict'
+
+let money = prompt ('Какую суммы хотите внести, руб.: ', 278) ;
+
+
+let pen = money [money.length-2];
+let end = money[money.length-1];
+ 
+if ( (pen == undefined) && (end == 1) ){
+    alert ('Сумма '+money + ' рубль зачислена');
+}else if ((pen == 1) && (end == 1) ) {
+    alert ('Сумма '+money + ' рублей зачислена');
+}else if  ( (pen >=0 && pen <=9) && (end == 1) )  {
+    alert ('Сумма '+money + ' рубль зачислена');
+}else if  ( (pen == undefined || pen == 0 || (pen >=2 && pen <=9) ) && (end >=2 && end <=4)){
+    alert ('Сумма '+money + ' рубля зачислена');
+}else {
+    alert ('Сумма '+money + ' рублей зачислена');
+}
+        
+
+    </script>
+    
+</body>
+</html>

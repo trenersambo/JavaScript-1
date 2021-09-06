@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        'use strict'
+
+        // ф-ция #1 на сумму аргументов
+
+        const getSumm = (num1, num2)=>{
+            let summ = num1 + num2;
+            //alert (summ);
+            return summ;
+        }
+        let arr = [10,20,30,40,50]
+        getSumm(arr[0], arr[4]); // 60
+
+        // ф-ция #2 на разницу аргументов
+
+        const getMinus = (num3, num4)=>{
+            let minus = num3 - num4;
+            //alert (minus);
+            return minus;
+        }
+        let arrMinus = [10,20,30,40,50]
+        getMinus(arr[1], arr[0]); // 10
+
+
+        // ф-ция #3 на частное двух аргументов
+
+        const getSepar = (num5, num6)=>{
+            let separate = num5 / num6;
+            //alert ( separate);
+            return separate;
+        }
+         getSepar(50, 25); // 2
+
+        // ф-ция #4 на произведение из двух аргументов
+
+        const getMult = (data1, data2)=>{
+            let multiplicate = data1  * data2;
+            //alert ( multiplicate );
+            return multiplicate;
+        }
+         getMult ( 100, Number('75') ); //  7500
+ 
+    </script>
+
+    
+</body>
+</html>
