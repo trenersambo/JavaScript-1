@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача№6 Ёлочка</title>
+</head>
+<body>
+ <!--   Нарисовать горку 20 рядов с помощью console.log (используя цикл for).  --><br>
+  
+
+    <script>'use strict'
+ 
+
+/*Вариант №1 ( в счет решения-?)*/
+
+    let summ = '';
+    for (let i = 1; i<=20; i++){
+    summ+=("*".repeat(i) +'\n');
+     }
+
+    alert(summ);
+    console.log (summ); 
+
+/*ОДНОСТРОЧНЫЙ Вариант №1.1 ( в счет решения-?)*/
+
+    let s = '';
+    for (let i = 1; i<=20;s+=("*".repeat(i) +'\n'), i++){
+     
+     }
+
+    console.log (s); 
+
+
+
+
+
+
+/*Вариант №2-тестовый (не в счет решения)*/
+let arr1 = ['*','**','***','****','******'];
+    let sum1 = ''
+
+    //Перебор свойств массива arr
+    for (let pin of arr1){
+        sum1+=pin+'\n';
+    }
+    alert (sum1);
+
+
+/*Вариант №3-тестовый (НЕ в счет решения )*/
+    let arr = ['*'];
+    let sum = '';
+
+    //Перебор свойств массива arr
+    for (let pin of arr){
+        sum+=pin;
+
+        //Замудрил через СЧЁТЧИК в .REPEAT 
+        let sumPin = '';
+        let bigPin;
+        for (let i=1; i<=20; i++){
+           bigPin = sum.repeat(i); 
+           sumPin+=bigPin+'\n'
+        }
+        alert (sumPin);
+
+    }
+
+
+
+    
+    </script>
+
+
+    
+
+</body>
+</html>
