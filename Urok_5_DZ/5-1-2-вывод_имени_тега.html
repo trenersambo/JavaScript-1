@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="one">Заголовок</h3>
+    <a class="one" href="#">ссылка</a>
+    <p class="one">параграф</p>
+
+    <!-- Задание.
+    1. Сохраните в переменную коллекцию элементов с классом one. Для получения
+    элементов используйте метод. getElementsByClassName() 
+    2. С помощью цикла переберите эту коллекцию и выведите в консоль название тега.
+    -->
+
+    <script>'use strict';
+
+    let one_1 = document.getElementsByClassName('one'); 
+    
+
+    for (let i=0; i<one_1.length; i++){
+        
+        //Из ПРОТОТИПА вижу - tagName, localName; но применить не разумею
+        //Мое видение про содержание тега: 
+       console.log (one_1[i].localName);  
+       console.log (one_1);
+       
+       //не прошло: console.log( tagName('one') );
+
+       //Как решил преподаватель (2-й по счету подсмотренный код)
+        console.log (one_1[i].tagName);
+
+    };
+
+ 
+
+    </script>
+</body>
+</html>
