@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">ссылка</a>
+    <a href="#"></a>
+    <a href="#">ссылка</a>
+    <a href="#"></a>
+
+    <!-- Задание.
+    1. Получите все ссылки.
+    2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
+
+    <script>'use strict';
+
+    let lnk = document.getElementsByTagName('a');
+    
+    //ТестовыеПроверки (before: верно ли я думаю) 
+    console.log (lnk);
+    console.log (lnk[1].textContent);
+
+    for (let i=0; i < lnk.length; i++) {
+       if(lnk[i].textContent !=='ссылка'){
+           lnk[i].innerText = 'ссылка'
+       }
+    
+    }
+    //ТестовыеПроверки (after: да, угадал) 
+    console.log (lnk);
+    console.log (lnk[1].textContent);
+
+        
+    </script>
+</body>
+</html>
