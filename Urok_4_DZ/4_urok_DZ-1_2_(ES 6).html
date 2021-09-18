@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>урок №4 Задача 1.2 (ES 6)</title>
+</head>
+<body>
+ 
+ <!-- omnino nihil liquet, mehercule--> 
+
+    <script>   'use strict'
+
+//конструктор Post, который принимает параметры author , text , date (время)...
+class Post {
+            constructor(author, text, date) {
+
+                //...и сохраняет их как свойства объекта.
+            this.author = author;   //'sambo' 
+             this.text = text;  //'sport'
+            this.date = date;   //'time'
+            }
+
+        //  метод edit, который будет принимать текст 'just do It'
+        edit(text) {
+
+            //...и записывать его в свойство text объекта
+          this.text = text;
+          }    
+    }
+
+     // проверка   
+    const postOne = new Post('sambo', 'great sport', new Date());
+     console.log(postOne);
+    
+    // замена текста: проверка
+    postOne.edit('just do It');
+
+     // после замены текста - выдаст новый текст           
+    console.log(postOne);
+
+    //конструктор AttachedPost, который принимает параметры author, text, date.
+    //  инициализация эти свойства с помощью конструктора Post, чтобы не дублировать код
+    class AttachedPost extends Post {
+    constructor(author, text, date) {
+
+    // Унаследуйте в объектах типа AttachedPost методы из Post.
+    super(author, text, date);
+
+   // в конструкторе AttachedPost должно создаваться свойство highlighted со значением false
+    this.highlighted = false;
+    }
+
+    //Объекты типа AttachedPost должны иметь метод makeTextHighlighted   
+    makeTextHighlighted() {
+
+        //который будет назначать свойству highlighted значение true
+       this.highlighted = true;
+                }
+            }
+
+        //смотрим в Родителя - новый текст 
+         const attach_One = new AttachedPost('judo', 'olympic sport', new Date());
+         console.log(attach_One);
+
+           attach_One.makeTextHighlighted();
+
+           //замена olympic --> just
+           attach_One.edit('just do It - 2');
+
+            console.log(attach_One);
+
+
+// Консоль (тест): 
+// Post {author: "sambo", text: "great sport", date: Fri Sep 10 2021 11:57:38 GMT+0300 (Москва, стандартное время)}author: "sambo"text: "just do It"date: Fri Sep 10 2021 11:57:38 GMT+0300 (Москва, стандартное время) {}__proto__: constructor: class Postedit: ƒ edit(text)__proto__: Object
+// Post {author: "sambo", text: "just do It", date: Fri Sep 10 2021 11:57:38 GMT+0300 (Москва, стандартное время)}
+// AttachedPost {author: "judo", text: "olympic sport", date: Fri Sep 10 2021 11:57:45 GMT+0300 (Москва, стандартное время), highlighted: false}
+// AttachedPost {author: "judo", text: "just do It - 2", date: Fri Sep 10 2021 11:57:45 GMT+0300 (Москва, стандартное время), highlighted: true}
+
+    </script>
+<!--non liquet - quid mihi non liquet-->  
+</body>
+</html>
