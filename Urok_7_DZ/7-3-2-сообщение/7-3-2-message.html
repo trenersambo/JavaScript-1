@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button>Показать сообщение</button>
+    <div class="message">
+        <strong>Самбо признано Олимпийским видом спорта</strong><hr>
+        Международный олимпийский комитет (МОК) впервые признал самбо олимпийским видом спорта.
+         Такое решение приняли на сессии МОК 20 июля в Токио (Япония) накануне Олимпийских игр. 
+         ... В 2003 году Государственный комитет РФ по физической культуре и спорту признал самбо
+          национальным и приоритетным видом спорта.
+
+          <img class="sambo" src="1.jpg" alt="sambo">
+    </div>
+
+    <!-- 
+    Задание. Вам нужно чтобы при клике на кнопку появлялось сообщение .message
+    снизу экрана, в общем как сообщения вконтакте.
+    1. Аудио воспроизводите как здесь https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
+    2. Чтобы получить высоту .message, используйте свойство clientHeight
+    3. Чтобы анимировать перемещение .message используйте стиль transform
+    как здесь https://webref.ru/css/value/translatey
+    -->
+
+    <script>'use strict';
+
+    let btn = document.querySelector('button');
+    let msg = document.querySelector('.message');
+    let audio = new Audio ('muzon.mp3');
+
+    btn.addEventListener ('click', function (){
+       //alert ('test')
+        audio.play();
+        let heightMsg = msg.clientHeight;
+        msg.style.transform = `translateY(-${100 + heightMsg}px)`;
+ 
+    });
+
+   
+        
+    </script>
+</body>
+
+</html>
