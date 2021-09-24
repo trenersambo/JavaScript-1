@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/basket.css">
 </head>
 <body>
      <!--обёртка ОБЩАЯ: start-->
@@ -21,7 +22,7 @@
            <!--Лого:end-->
 
 
-           <!--корзина: start-->
+           <!--иконкаКорзина: start-->
            <span class="korz_icon" >
 
            <div class="corzina">
@@ -31,7 +32,26 @@
            <span>0</span>
 
             </span>
-           <!--корзина: end-->
+           <!--иконкаКорзина: end-->
+
+
+           <!--ИтоговаяТаблица: start-->
+
+           <div class="basket hidden">
+            <div class="basketRow basketHeader">
+                <div>Название товара</div>
+                <div>Количество</div>
+                <div>Цена за шт.</div>
+                <div>Итого</div>
+            </div>
+
+            <div class="basketTotal">
+                Товаров в корзине на сумму:
+                $<span class="basketTotalValue">0</span>
+            </div>
+        </div>
+
+            <!--ИтоговаяТаблица: end-->
 
 
         </div>
@@ -51,7 +71,7 @@
                                 <div class="dark_card">
 
                                     <button data-productId="0">
-                                        <img src="images/cart.svg" alt="">
+                                        <img src="#" alt="">
                                         add to Cart
                                     </button>
 
@@ -78,7 +98,7 @@
                                 <div class="dark_card">
 
                                     <button data-productId="1">
-                                        <img src="images/cart.svg" alt="">
+                                        <img src="#" alt="">
                                         add to Cart
                                     </button>
 
@@ -105,7 +125,7 @@
                                 <div class="dark_card">
 
                                     <button data-productId="2">
-                                        <img src="images/cart.svg" alt="">
+                                        <img src="#" alt="">
                                         add to Cart
                                     </button>
 
@@ -128,11 +148,11 @@
 
             
 
-            <!--сюда д.попасть еще блоки: start-->
+            <!--сюда д.попасть еще ТРИ БЛОКА : start-->
             <div class="vstavka">
 
             </div>
-            <!--сюда д.попасть еще блоки: end-->
+            <!--сюда д.попасть еще ТРИ БЛОКА : end-->
 
     </div>
     <!--обёртка ОБЩАЯ: end-->   
@@ -140,6 +160,7 @@
     <!--Подключаю js-->
     <script src="js/ProdDTO.js"></script>
     <script src="js/prods.js"></script>
-    <script src="js/prodsCards.js"></script>
+    <script src="js/vstavka_In_Index.js"></script>
+    <script src="js/basket.js"></script>
 </body>
 </html>

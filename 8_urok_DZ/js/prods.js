@@ -1,3 +1,4 @@
+/*Значения через вставку в JS-коде попадут в index.html */
 const prods = [
     
 new ProdDTO(

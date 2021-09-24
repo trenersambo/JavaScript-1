@@ -51,8 +51,9 @@
     line-height: 29px;
 }
 
-/*Карточки Товара*/
-.card{
+/*Карточки Товара: видимая и вставляемая через JS*/
+.card,
+.vstavka{
     margin-top: 35px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
