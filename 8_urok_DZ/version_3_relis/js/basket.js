@@ -20,18 +20,18 @@ function clickAddToCart(){
 function adProdHand (event){
     const prodId = event.currentTarget.getAttribute('data-productId');
 
-    itogKorzina (prodId);
+    itogKorzina (prodId);//добавлен нов. товар в Корзину-> сраб.эта ф-ция(см.9)
 }
 
 clickAddToCart ();
 
 
 /*найти span из иконки Корзины */
-const basketCountEl = document.querySelector('.korz_icon span');
+const basketCountEl = document.querySelector('.korz_icon span');//ЦифраВКружочке(см.8)
 
 /* найти 2 класса из сводТаблицы */
 const basketTotalEl = document.querySelector('.basketTotal');//СтрокаИтогоСуммаВсехТоваров
-const basketTotalValueEl = document.querySelector('.basketTotalValue');//ЦифраИтогоСуммаВсехТоваров
+const basketTotalValueEl = document.querySelector('.basketTotalValue');//ЦифраИтогоСуммаВсехТоваров(см.7)
 
 /* 1. внутрь объекта basket прилетает product c "ключ:значение" */
 let basket = {};
@@ -97,6 +97,22 @@ function plusProdSum (prodId){
 
 function itogSum (){
     let totalSum = 0;
-    
+    for (let prodId in basket){
+        totalSum += basket[prodId]* prods[prodId].price
+    }
+    basketTotalValueEl.textContent = totalSum.toFixed(2);
 }
  
+/*8. ф-ия увелич.цифру в Кружочке */
+function plusProdCount(){
+    basketCountEl.textContent++;
+}
+
+/*9. товар добавлен в Корзину: срабатывает эта ф-ция */
+ function itogKorzina(prodId){
+     plusProdCount();
+     prodToKorzina(prodId)
+     korzinaNewStroka(prodId);
+     itogSum();
+
+ }

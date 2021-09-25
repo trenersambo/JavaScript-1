@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/basket.css">
+</head>
+<body>
+     <!--обёртка ОБЩАЯ: start-->
+    <div class="all center">
+
+        <!--шапка: start-->
+        <div class="header">
+
+           <!--Лого:start-->
+            <div class="logo">
+              <img class="logo_img" src="logo.png" alt="logo">
+           </div>
+           <!--Лого:end-->
+
+
+           <!--иконкаКорзина: start-->
+           <span class="korz_icon" >
+
+           <div class="corzina">
+               <img src="korz.png" alt="cart">
+           </div> 
+
+           <span>0</span>
+
+            </span>
+           <!--иконкаКорзина: end-->
+
+
+           <!--ИтоговаяТаблица: start-->
+
+           <div class="basket hidden">
+            <div class="basketRow basketHeader">
+                <div>Название товара</div>
+                <div>Количество</div>
+                <div>Цена за шт.</div>
+                <div>Итого</div>
+            </div>
+
+            <div class="basketTotal">
+                Товаров в корзине на сумму:
+                $<span class="basketTotalValue">0</span>
+            </div>
+        </div>
+
+            <!--ИтоговаяТаблица: end-->
+
+
+        </div>
+        <!--шапка: end-->
+
+
+                    <!--Карточки товара: start-->
+
+                <div class="card">
+
+                        <!--карточка №1: start-->
+                        <div class="card_1">
+
+                            <div class="top_card">
+                                <img src="pf_man.png" alt="" class="foto_card">
+
+                                <div class="dark_card">
+
+                                    <button data-productId="0">
+                                        <img src="#" alt="">
+                                        add to Cart
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bottom_card">
+                                <div class="name_card">Товар 0</div>
+                                <div class="text_card">Описание товара</div>
+                                <div class="price_card">100 руб.</div>
+                            </div>
+
+                        </div>
+                        <!--карточка №1: end-->
+
+                        <!--карточка №2: start-->
+                        <div class="card_2">
+
+                            <div class="top_card">
+                                <img src="pf_man.png" alt="" class="foto_card">
+
+                                <div class="dark_card">
+
+                                    <button data-productId="1">
+                                        <img src="#" alt="">
+                                        add to Cart
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bottom_card">
+                                <div class="name_card">Товар 1</div>
+                                <div class="text_card">Описание товара 2</div>
+                                <div class="price_card">200 руб.</div>
+                            </div>
+                            
+                        </div>
+                        <!--карточка №2: end-->
+
+                        <!--карточка №3: start-->
+                        <div class="card_3">
+                        
+                            <div class="top_card">
+                                <img src="pf_man.png" alt="" class="foto_card">
+
+                                <div class="dark_card">
+
+                                    <button data-productId="2">
+                                        <img src="#" alt="">
+                                        add to Cart
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="bottom_card">
+                                <div class="name_card">Товар 2</div>
+                                <div class="text_card">Описание товара 3</div>
+                                <div class="price_card">300 руб.</div>
+                            </div>
+
+                        </div>
+                        <!--карточка №3: end-->  
+
+                </div>
+                    <!--Карточки товара: end-->
+
+            
+
+            <!--сюда д.попасть еще ТРИ БЛОКА : start-->
+            <div class="vstavka">
+
+            </div>
+            <!--сюда д.попасть еще ТРИ БЛОКА : end-->
+
+    </div>
+    <!--обёртка ОБЩАЯ: end-->   
+
+    <!--Подключаю js-->
+    <script src="js/ProdDTO.js"></script>
+    <script src="js/prods.js"></script>
+    <script src="js/vstavka_In_Index.js"></script>
+    <script src="js/vstavka_In_Korzina.js"></script>
+    <script src="js/basket.js"></script>
+
+</body>
+</html>
