@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Задание.
+        Дописывайте в строку totalString с помощью цикла и конкатенации строки,
+        так, чтобы итоговое значение в totalString получилось:
+         слово1слово2слово3
+    -->
+    
+    <script>'use string';
+        let totalString = "";
+
+         
+        //ВАРИАНТ №1:
+        let p = 'слово';
+         for(let i = 0; i < 3; i++){
+            totalString+= p + [i+1];
+         };        
+        alert (totalString);
+        console.log(totalString);// слово1слово2слово3
+
+        /*-------------------------------*/
+
+        //ВАРИАНТ №2 (с глобальной переменной sum):
+        let totalString1 = "";
+        let sum = 0;
+         for(let i = 0; i < 3; i++){
+            //sum ++;
+            totalString1 += 'слово' + ++sum;
+           };        
+        console.log(totalString1);// слово1слово2слово3        
+
+ 
+
+    </script>
+</body>
+</html>

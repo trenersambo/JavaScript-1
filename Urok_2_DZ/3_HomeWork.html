@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2. Задание №3</title>
+</head>
+<body>
+
+    <script> 'use strict';
+
+let a = +prompt ("Enter number A: ");
+let b = +prompt ("Enter number B: ");
+
+let getFunc = (a,b)=>{
+
+    if (a>=0 && b>=0){
+        let subtr = (a - b);
+        alert (subtr);
+        return subtr;
+     
+    }else if (a<0 && b<0){
+        let multi = a*b;
+        alert (multi);
+        return multi;
+
+    }else if (a<=-1 && b>=0 || a>=0 && b<=-1){
+        let sum = a + b;
+        alert (sum);
+        return sum;
+       
+    }else if(isNaN(a) || isNaN(b)){
+        alert ('Дружище\, enter ONLY number ')
+
+    }
+}
+
+getFunc(a,b);
+
+ 
+//тестирование:
+/*Если а, b положительные, то найти их разность*/
+//console.log (getFunc (2,3)) //2 - 3 = -1
+//console.log (getFunc (0,0)) // 0 - 0 = 0
+
+/*Если а, b отрицательные, то найти их произведение*/
+//console.log (getFunc (-2,-3)) //-2*(-3) = 6
+//console.log (getFunc (-5,-1)) //-5*(-1) = 5
+
+/*Если а, b разные по знаку, то найти их сумму*/
+//console.log (getFunc (0,-3)) //0 + (-3) = -3
+//console.log (getFunc (-5,6)) //-5 + 6 = 1
+
+
+
+    </script>
+    
+</body>
+</html>
