@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="one">параграф 1</p>
+    <p>параграф</p>
+    <p class="one">параграф 2</p>
+    <h3 class="one">заголовок 1</h3>
+    <h3>заголовок 2</h3>
+
+    <!-- Задание. Используя поиск по имени класса, 
+        получите все (примени .length ?) элементы с классом .one
+    и выведите их в консоль. -->
+
+    <script> 'use strict'
+
+let search_One = document.getElementsByClassName('one'); 
+
+// #1. вывод их в консоль (как я понял)
+for(let i=0; i < search_One.length; i++){
+console.log(search_One[i])
+
+};
+
+
+// #2. или имелось ввиду (вариант вывода)
+console.log(search_One);
+
+// #3 (как вариант) кол-во класса "one"
+console.log(search_One.length); 
+        
+  
+
+    </script>
+</body>
+</html>
