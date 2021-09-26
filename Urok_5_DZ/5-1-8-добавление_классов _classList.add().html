@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Lorem, ipsum.</b>
+    <b class="sign">Lorem, ipsum.</b>
+    <b class="sign">Lorem, ipsum.</b>
+    <b>Lorem, ipsum.</b>
+
+    <!-- 
+    Задание.
+    1. Получите все теги b.
+    2. С помощью метода contains() из classList, проверьте, есть ли у тега
+    класс sign, и если нет, то тогда добавьте с помощью метода classList.add()
+    -->
+
+    <script>'use stict';
+
+    let bl = document.getElementsByTagName ('b');
+
+    //self-checked (BEFORE):
+    console.log (bl); //HTMLCollection(4) [b, b.sign, b.sign, b]
+
+    for (let i = 0; i < bl.length; i++){
+        if (bl[i].classList.contains !=='sign'){
+            bl[i].classList.add('sign') //наугад
+        }
+    }
+    //self-checked (AFTER):
+    console.log (bl);//HTMLCollection(4) [b.sign, b.sign, b.sign, b.sign]
+    
+ 
+
+
+    </script>
+</body>
+</html>
