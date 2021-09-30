@@ -1,0 +1,42 @@
+/*css файл для сводТаблицы Товар-Количество-Цена-Итог*/
+
+.basket {
+    position: absolute;
+    z-index: 3;
+    right: 300px;
+    top: 60px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/*сводТаблица по умолч. скрыта*/
+/* показать таблицу - через js*/
+.hidden {
+    display: none;
+    
+}
+
+/*Выстроить в строку все наименования*/
+.basketRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+}
+
+/*строка ЖИРНЫМ шрифтом*/
+.basketHeader {
+    font-weight: bold;
+}
+
+/*цифра ИТОГА - жирным шрифтом*/
+.basketTotal {
+    font-weight: bold;
+    text-align: right;
+}
+
